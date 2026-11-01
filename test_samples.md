@@ -1,6 +1,5 @@
 # Test Results
 
-Python version used: 3.__ | Operating system: ________ | Date: ________
 
 | # | Input | Expected result | Actual result | Pass/Fail |
 |---|-------|-----------------|---------------|-----------|
@@ -18,7 +17,3 @@ Python version used: 3.__ | Operating system: ________ | Date: ________
 | www.example.com | Uses HTTP. HTTPS alone does not prove trust. |
 | https://secure-login.example.invalid | No listed warning signs found. This does NOT prove safety. |
 | http://[bad | This text is not a valid URL format. (no crash, thanks to Improvement C) |
-
-## Notes
-
-[Write 2 or 3 lines in your own words: what you learned, and what surprised you.]
