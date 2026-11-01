@@ -44,26 +44,12 @@ Never enter passwords from unexpected links.
 | 4 | https://a.b.c.d.e.example.invalid/path | Many hostname segments | Many hostname segments warning | PASS |
 | 5 | https://xn--example.invalid/ | Punycode-style hostname | Punycode-style hostname warning | PASS |
 
-The full table is in `tests/test_samples.md`.
-
-## Screenshots
-![Sample run](screenshots/sample_run.png)
-![Test results](screenshots/test_results.png)
 
 ## Improvements
 1. **Loop with quit (Improvement A)** - the program now repeats until the user types `q`, so several URLs can be checked in one run. I tested it by entering two URLs in a row and then `q`.
 2. **Malformed input handling (Improvement C)** - `http://[bad` used to crash with a `ValueError`. I wrapped the parsing line in `try / except` so the program prints a friendly message instead. I tested it with `http://[bad` and re-ran all five sample tests.
 3. **Review carefully summary (Improvement B)** - a helper function tells real warnings apart from information messages, and the program prints how many warning signs were found.
 
-## Limitations
-This is an educational tool. It only reads URL text. It does not visit URLs, scan for malware or prove that a URL is safe. No warning signs found does NOT mean a URL is safe.
-
-## Ethical Use
-Use sample strings only. Do not collect credentials. Do not use this project to deceive anyone or to test websites without permission.
-
-## AI Use
-I used Claude (Anthropic) to help draft the code, the test table and this README from the EWB workbook. I am responsible for running, testing and understanding the project.
-
 
 ## Author
-Gantela Sai Sharanya, [batch or course], EWB Courses
+Gantela Sai Sharanya, EWB Courses
